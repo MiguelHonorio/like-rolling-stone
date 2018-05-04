@@ -1,4 +1,4 @@
-package iniciante;
+package exercises;
 
 import java.text.DecimalFormat;
 import java.util.Locale;

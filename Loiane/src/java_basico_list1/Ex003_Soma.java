@@ -1,6 +1,5 @@
 package java_basico_list1;
 
-import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Ex003_Soma {
