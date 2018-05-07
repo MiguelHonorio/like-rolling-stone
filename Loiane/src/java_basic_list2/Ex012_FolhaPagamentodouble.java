@@ -7,10 +7,13 @@ public class Ex012_FolhaPagamentodouble {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
+
 		System.out.println("Qual o valor hora: ");
 		double hora = scan.nextDouble();
+
 		System.out.println("Qual a quantidade de horas trabalhadas no mês: ");
 		double horasT = scan.nextDouble();
+
 		double salBruto = hora * horasT;
 		double percentualIR = 0;
 		if (salBruto <= 900) {
@@ -31,14 +34,14 @@ public class Ex012_FolhaPagamentodouble {
 		double fgts = (salBruto / 100) * 11;
 		double descontos = ir + inss;
 		double salLiquido = salBruto - descontos;
-		
-		System.out.println("Salário bruto: R$ " +salBruto);
-		System.out.println("(-) IR (" +percentualIR+ "%): R$ "+ir);
-		System.out.println("(-) INSS (10%) : R$ " +inss);
-		System.out.println("Total de descontos: R$ " +descontos);
-		System.out.println("Salário líquido: R$ " +salLiquido);
-		
-		
+
+		System.out.println("Salário bruto: R$ " + salBruto);
+		System.out.println("(-) IR (" + percentualIR + "%): R$ " + ir);
+		System.out.println("(-) INSS (10%) : R$ " + inss);
+		System.out.println("FGTS (11%): " + fgts);
+		System.out.println("Total de descontos: R$ " + descontos);
+		System.out.println("Salário líquido: R$ " + salLiquido);
+
 	}
 
 }
