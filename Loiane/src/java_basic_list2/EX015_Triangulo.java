@@ -13,7 +13,7 @@ public class EX015_Triangulo {
 		double medida2 = scan.nextDouble();
 		System.out.println("Entre com a 3° medida: ");
 		double medida3 = scan.nextDouble();
-		
+		//teste commite
 		
 		
 	}
