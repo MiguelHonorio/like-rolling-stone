@@ -7,37 +7,34 @@ public class EX022_QtdeKgMorangoMacas {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Quantidade em KG: ");
-		double kg = scan.nextDouble();
-		System.out.println("Fruta escolhida: ");
-		String fruta = scan.next();
+		System.out.println("Ente com a quantidade de Morango: ");
+		double qtdMorango = scan.nextDouble();
+		System.out.println("Entre com a quantidade(kg) de maça: ");
+		double qtdMaca = scan.nextDouble();
 
-		double morango = 2.50;
-		double maca = 1.50;
-		double percDesc = 10;
-		double total = 0;
-		double totalDesc = 0;
-
-		if (fruta.equalsIgnoreCase("s")) {
-			if (kg <= 5) {
-				total = kg * morango;
-			} else if (kg > 5 && kg <= 8) {
-				total = kg * 2.20;
-			}
-
-		} else if (fruta.equalsIgnoreCase("a")) {
-			if (kg <= 5) {
-				total = kg * morango;
-			} else if (kg > 5) {
-				total = kg * 1.50;
-			}
-		}if (total > 25) {
-			totalDesc = (total * 10) / 100;
+		double precoMorango = 0;
+		if (qtdMorango <= 5) {
+			precoMorango = 2.5;
+		} else {
+			precoMorango = 2.2;
 		}
 
-		double precoApagar = total - totalDesc;
-		System.out.println("O valor a ser pago é: " + precoApagar);
+		double precoMaca = 0;
+		if (qtdMaca <= 5) {
+			precoMaca = 1.8;
+		} else {
+			precoMaca = 1.5;
+		}
 
+		double precoTotalMorango = qtdMorango * precoMorango;
+		double precoTotalMaca = qtdMaca * precoMaca;
+		double precoParcial = precoTotalMorango + precoTotalMaca;
+		double precoTotal = precoParcial;
+
+		if (qtdMorango + qtdMaca > 8 || precoParcial > 25) {
+			precoTotal = precoParcial - ((precoParcial / 100) * 10);
+		}
+
+		System.out.println("O valor total a ser pago é : " + precoTotal);
 	}
-
 }
