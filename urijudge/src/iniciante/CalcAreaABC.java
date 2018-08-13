@@ -21,6 +21,7 @@ public class CalcAreaABC {
 		System.out.printf("TRAPEZIO: %.3f\n", (A+B)*C /2);
 		System.out.printf("QUADRADO: %.3f\n", (B*B));
 		System.out.printf("RETANGULO: %.3f\n", (A*B));
+		//adicionando comentário
 		
 	}
 
