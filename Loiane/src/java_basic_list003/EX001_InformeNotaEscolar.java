@@ -1,5 +1,6 @@
 package java_basic_list003;
 
+import java.io.NotActiveException;
 import java.util.Scanner;
 
 public class EX001_InformeNotaEscolar {
@@ -9,12 +10,13 @@ public class EX001_InformeNotaEscolar {
 		Scanner scan = new Scanner(System.in);
 		boolean valido = false;
 
-		System.out.println("Informa uma nota de 0 à 10!");
 		do {
+			System.out.println("Informa uma nota de 0 à 10!");
+			valido = true;
 			int nota = scan.nextInt();
 			if (nota <= 10 && nota >= 0) {
 				System.out.println("A nota " + nota + " é válida");
-			}else{
+			} else {
 				System.out.println("Você digitou uma nota inválida, tente novamente!");
 			}
 
