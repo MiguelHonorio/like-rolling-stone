@@ -9,38 +9,21 @@ public class EX1040_Media3 {
 
 	public static void main(String[] args) throws IOException {
 
-		Locale.setDefault(Locale.US);
-		DecimalFormat df = new DecimalFormat("0.#");
+		int i = 4;
+		double d = 4.0;
+		String s = "HackerRank ";
+
 		Scanner scan = new Scanner(System.in);
-		float n1 = scan.nextFloat();
-		float n2 = scan.nextFloat();
-		float n3 = scan.nextFloat();
-		float n4 = scan.nextFloat();
-		float nExame;
-		float media = ((n1 * 2) + (n2 * 3) + (n3 * 4) + (n4 * 1)) / 10;
-		
-		System.out.println("Media: " + df.format(media));
 
-		if (media >= 7.0) {
-			System.out.println("Aluno aprovado.");
+		int i2 = scan.nextInt();
+		double d2 = scan.nextDouble();
+		String s2 = scan.nextLine();
+		s2 = scan.nextLine();
 
-		} else if (media < 5) {
-			System.out.println("Aluno reprovado.");
+		System.out.println(i + i2);
+		System.out.println(d + d2);
+		System.out.println(s + s2);
 
-		} else if (media >= 5.0 && media <= 6.9) {
-			System.out.println("Aluno em exame.");
-
-			System.out.println("Nota do exame: " + df.format(nExame = scan.nextFloat()));
-
-			float mFinal = (nExame + media) / 2;
-
-			if (mFinal >= 5) {
-				System.out.println("Aluno aprovado.");
-			} else {
-				System.out.println("Aluno reprovado");
-			}
-			System.out.println("Media final: " + df.format(mFinal));
-
-		}
+		scan.close();
 	}
 }
